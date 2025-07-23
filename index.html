@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lydia Crypto Exchange</title>
+  <link rel="stylesheet" href="/src/css/styles.css">
+  <link rel="icon" href="/public/favicon.ico">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="/public/assets/logo.png" alt="Lydia Exchange">
+      <h1>Lydia Crypto Exchange</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#" class="active">Exchange</a></li>
+        <li><a href="#">Markets</a></li>
+        <li><a href="#">Portfolio</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="converter">
+      <h2>Crypto Converter</h2>
+      <div class="converter-box">
+        <input type="number" id="amount" placeholder="0.00" min="0">
+        <select id="from-currency">
+          <option value="BTC">Bitcoin (BTC)</option>
+          <option value="ETH">Ethereum (ETH)</option>
+          <option value="USDT">Tether (USDT)</option>
+        </select>
+        <button id="swap-btn">⇄</button>
+        <select id="to-currency">
+          <option value="USD">US Dollar (USD)</option>
+          <option value="IDR">Indonesian Rupiah (IDR)</option>
+          <option value="EUR">Euro (EUR)</option>
+        </select>
+        <button id="convert-btn">Convert</button>
+      </div>
+      <div id="result" class="result-box"></div>
+    </section>
+
+    <section class="market-data">
+      <h2>Market Prices</h2>
+      <div class="chart-container">
+        <canvas id="price-chart"></canvas>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2023 Lydia Exchange. All rights reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="/src/js/api.js"></script>
+  <script src="/src/js/app.js"></script>
+  <script src="/src/js/chart.js"></script>
+</body>
+</html>
